@@ -3,8 +3,26 @@
 require_relative "../lib/kid"
 require_relative "../lib/dancer"
 
+
 angelina = Kid.new("Angelina")
 mikhail_baryshnikov = Dancer.new("Mikhail")
 
 puts "#{angelina.name} says: #{angelina.twirl}"
 puts "#{mikhail_baryshnikov.name} says: #{mikhail_baryshnikov.take_a_bow}"
+
+# Remember, include is used to add functionality to our classes via instance methods. 
+# The InstanceMethods module inside the FancyDance module contains the methods twirl, 
+# jump, pirouette, and take_a_bow, which any instance of the Dancer or Kid class can do.
+
+    
+angelica = Dancer.new("Angelica")
+puts angelica.twirl
+# # => "I'm twirling!"
+puts angelica.jump
+# # => "Look how high I'm jumping!"
+    
+buster = Kid.new("Buster")
+puts buster.jump
+puts buster.take_a_bow
+# # => "Look how high I'm jumping!"
+# # => "Thank you, thank you. It was a pleasure to dance for you all."
